@@ -10,9 +10,17 @@ public class Palindrome {
 
 		
 
-		Palindrome.isPalindrome(str);
+		boolean isPalindrome = Palindrome.isPalindrome(str);
 
-	
+		if(isPalindrome) {
+
+			System.out.println("yes, "+str+" is a palindrome.");
+
+		}else {
+
+			System.out.println("No, "+str+" is no a palindrome.");
+
+		}
 
 		
 
@@ -20,7 +28,7 @@ public class Palindrome {
 
 	
 
-	public static void isPalindrome(String str) {
+	public static boolean isPalindrome(String str) {
 
 		
 
@@ -28,7 +36,7 @@ public class Palindrome {
 
 		if(str.isEmpty()) {
 
-			System.out.println("it's empty.");
+			return false;
 
 		}
 
@@ -52,11 +60,11 @@ public class Palindrome {
 
 			if(reversed.equals(cleaned)) {
 
-				System.out.println("it's palindrome.");
+				return true;
 
 			}else {
 
-				System.out.println("it's not palindrome.");
+				return false;
 
 			}
 
