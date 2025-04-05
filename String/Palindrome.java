@@ -27,53 +27,51 @@ public class Palindrome {
 	}
 
 	
+        public static boolean isPalindrome(String str) {
 
-	public static boolean isPalindrome(String str) {
+            
 
-		
+            //what if it's null or empty string?
 
-		//what if it's empty string?
+            if(str.isEmpty()) {
 
-		if(str.isEmpty()) {
+                return false;
 
-			return false;
+            }
 
-		}
+            if(str==null) {
 
-		else{
+                return false;
 
-			//what if it has a spaces and mixed-case?
+            }
 
-			//Since Java String is immutable, it always return a new string . so I need to store it in a new variable.
+            else{
 
-			String cleaned = str.replace(" ","").toLowerCase();
+                //what if it has a spaces and mixed-case?
 
-			
+                //Since Java String is immutable, it always return a new string . so I need to store it in a new variable.
 
-			//reverse it. using reverse method of StringBuilder. and convert it into String for store it into String object.
+                String cleaned = str.replaceAll("[^a-zA-Z0-9]","").toLowerCase();
 
-			String reversed = new StringBuilder(cleaned).reverse().toString();
+                
 
-			
+                //reverse it. using reverse method of StringBuilder. and convert it into String for store it into String object.
 
-			//compare it with the original string.
+                String reversed = new StringBuilder(cleaned).reverse().toString();
 
-			if(reversed.equals(cleaned)) {
+                
 
-				return true;
+                //compare it with the original string.
 
-			}else {
+                return reversed.equals(cleaned);
 
-				return false;
+                
 
-			}
+            }
 
-			
+            
 
-		}
+        }
 
-		
-
-	}
-
-}
+    }
+	
