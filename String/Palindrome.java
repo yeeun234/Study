@@ -1,14 +1,20 @@
+import java.util.Scanner;
+
 public class Palindrome {
 	public static void main(String[] args) {
 
-		//What do I want my program to do ?  - checking if a string is a palindrome. 
-		String str = "Madam";
+		//What do I want my program to do ?  - checking if a user input is a palindrome. 
+		Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a string to check if it is a palindrome: ");
+        String input = sc.nextLine();
+        System.out.println("You entered: " + input);
+        sc.close();
 		
-		boolean isPalindrome = Palindrome.isPalindrome(str);
+		boolean isPalindrome = Palindrome.isPalindrome(input);
 		if(isPalindrome) {
-			System.out.println("yes, "+str+" is a palindrome.");
+			System.out.println("Yes, "+input+" is a palindrome.");
 		}else {
-			System.out.println("No, "+str+" is not a palindrome.");
+			System.out.println("No, "+input+" is not a palindrome.");
 		}
 		
 	}

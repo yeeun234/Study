@@ -1,0 +1,14 @@
+# Commit type (choose one): feat, fix, refactor, test, docs, style, chore
+# Example: feat: add user input for palindrome check
+
+<type>: <short summary>
+
+- What I did:
+  - 
+- Why I did it:
+  - 
+- Notes (optional):
+  - 
+
+# ------------------------------
+# Lines starting with # are comments and won't be included
