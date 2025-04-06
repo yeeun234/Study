@@ -1,10 +1,14 @@
+import java.util.Scanner;
+
 public class PalindromeReview {
    	
 	public static void main(String[] args) {
 		
-		String str = "Madam";
-		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a string to check if it is a palindrome: ");
+        String str = sc.nextLine();
 		boolean result = PalindromeReview(str);
+        sc.close();
 		
 		if(result) {
 			System.out.println(str+" is a palindrome. ");
@@ -20,14 +24,12 @@ public class PalindromeReview {
 		if(str==null || str.trim().isEmpty()) {
 			return false;
 		}
-		else {
+		
 			str = str.toLowerCase();
 			String reversed = new StringBuilder(str).reverse().toString();
-			if(str==reversed) {
-				return true;
-			}
-			return false;
-		}
+			return str.equals(reversed);
+			
+		
 	}
 
 }
