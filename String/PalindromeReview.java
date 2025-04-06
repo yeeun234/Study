@@ -1,3 +1,4 @@
+import java.util.Locale;
 import java.util.Scanner;
 
 public class PalindromeReview {
@@ -28,7 +29,7 @@ public class PalindromeReview {
 			return false;
 		}
 		
-			str = str.trim().toLowerCase();
+			str = str.trim().toLowerCase(Locale.ROOT);
 			String reversed = new StringBuilder(str).reverse().toString();
 			return str.equals(reversed);
 			
